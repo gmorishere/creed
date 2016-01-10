@@ -209,10 +209,28 @@ function create_config( )
     "Moderator_Gp",
     "LockTag",
     "banhammer",
+    "sms",
+    "inv",
+    "invite",
+    "GPS",
+    "google",
+    "download_media",
+    "creed",
+    "closegroup",
+    "Calculator",
+    "Block",
+    "Auto_Leave",
+    "Antilink",
+    "antilink",
+    "TagAll",
+    "webshot",
+    "nerkh",
+    "LinkPv",
     "stats",
     "anti_spam",
     "owners",
-    "arabic_lock",
+    "Boobs",
+    "LockTag",
     "set",
     "get",
     "broadcast",
@@ -264,7 +282,7 @@ you Can do it By Replay 👤
 〰〰〰〰〰〰〰〰〰〰
 2. GroupManager :🔹
 
-!Creategroup "GroupName" 🙈
+!Creategp "GroupName" 🙈
 You Can CreateGroup With this command😱
 
 !lock member 😋
@@ -315,10 +333,10 @@ added !clink *
 and !glink :)
 〰〰〰〰〰〰〰〰
 Admins :®
-!add 😎
+!addgp 😎
 You Can add the group to moderation.json😱
 
-!rem😏
+!remgp 😏
 You Can Remove the group from mod.json⭕️
 
 !setgpowner (Gpid) user_id ⚫️
