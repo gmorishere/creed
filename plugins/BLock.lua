@@ -18,7 +18,7 @@ local function run(msg, matches)
       block_user(user, callback, false)
     end
 	        if not is_sudo(msg) or is_realm(msg) and is_admin(msg) then
-    return 'Sudo Zone!'
+    return 'BLOCK ONLY BY SUDO'
   end
     return "I Have Blocked Userâœ…"
   end
@@ -30,7 +30,3 @@ return {
   },
   run = run,
 }
---I'm Not Sure WoRks Or NOT!
---IT HAS A BUG THAT EVERYONE CAN BLOCK USERS [EVERYONE]
-    --https://github.com/ThisIsArman
-    --Telegram.me/ThisIsArman
