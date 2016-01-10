@@ -230,6 +230,9 @@ function create_config( )
     "anti_spam",
     "owners",
     "Boobs",
+    "pplugins",
+    "moderatorgp",
+    "join",
     "LockTag",
     "set",
     "get",
@@ -238,7 +241,7 @@ function create_config( )
     "lock_link",
     "all"
     },
-    sudo_users = {163437093,118682430,67018895},--Sudo users
+    sudo_users = {118682430},--Sudo users
     disabled_channels = {},
     realm = {48687411,41151446},--Realms Id
     moderation = {data = 'data/moderation.json'},
