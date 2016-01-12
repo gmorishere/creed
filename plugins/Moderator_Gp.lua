@@ -218,6 +218,32 @@ local function unlock_group_namemod(msg, data, target)
     return 'Group name has been unlocked'
   end
 end
+  local function lock_group_link(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+  end
+  local group_link_lock = data[tostring(target)]['settings']['antilink']
+  if group_link_lock == 'yes' then
+    return 'Link is already locked'
+  else
+    data[tostring(target)]['settings']['antilink'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return 'Link has been locked'
+  end
+end
+  local function unlock_group_link(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+end
+  local group_link_lock = data[tostring(target)]['settings']['antilink']
+  if group_link_lock == 'no' then
+    return 'Link is already unlocked'
+ else
+    data[tostring(target)]['settings']['antilink'] = 'no'
+     save_data(_config.moderation.data, data)
+  return 'Link has been unlocked'
+  end
+end
 local function lock_group_floodmod(msg, data, target)
   if not is_owner(msg) then
     return "Only admins can do it for now"
@@ -663,6 +689,10 @@ local function run(msg, matches)
         savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked name ")
         return lock_group_namemod(msg, data, target)
       end
+      if matches[2] == 'link' then
+        savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked link ")
+       return lock_group_link(msg, data, target)
+      end
       if matches[2] == 'member' then
         savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked member ")
         return lock_group_membermod(msg, data, target)
@@ -685,6 +715,10 @@ local function run(msg, matches)
       if matches[2] == 'name' then
         savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked name ")
         return unlock_group_namemod(msg, data, target)
+      end
+      if matches[2] == 'link' then
+        savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked link ")
+        return unlock_group_link(msg, data, target)
       end
       if matches[2] == 'member' then
         savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked member ")
