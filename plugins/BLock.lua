@@ -17,10 +17,10 @@ local function run(msg, matches)
       user = 'user#id'..user
       block_user(user, callback, false)
     end
-	        if not is_sudo(msg) or is_realm(msg) and is_admin(msg) then
-    return 'BLOCK ONLY BY SUDO'
+	        if not is_sudo(msg) or is_realm(msg)  and is_admin(msg) then
+    return '💠 Only Admins And Sudo can Block 💠'
   end
-    return "I Have Blocked Userâœ…"
+    return "User have been ❌Blocked❌ successfully✅"
   end
 end
 
